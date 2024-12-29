@@ -14,15 +14,15 @@ build:
     - patatt=patatt:command
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - pynacl
 
 test:
@@ -33,6 +33,7 @@ test:
     - patatt --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://git.kernel.org/pub/scm/utils/patatt/patatt.git/about/
