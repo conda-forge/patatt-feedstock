@@ -17,7 +17,6 @@ email header.
 If your project workflow doesn't use patches sent via email, then you don't
 need this and should simply start signing your tags and commits.
 
-
 Current build status
 ====================
 
