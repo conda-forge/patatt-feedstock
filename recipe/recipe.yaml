@@ -19,7 +19,7 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - setuptools
   run:
@@ -30,11 +30,11 @@ tests:
   - python:
       imports:
         - patatt
-      python_version: ${{ python_min }}
+      python_version: ${{ python_min }}.*
   - requirements:
       run:
         - pip
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
     script:
       - pip check
       - patatt --help
