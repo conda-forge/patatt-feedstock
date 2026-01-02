@@ -1,5 +1,5 @@
 context:
-  version: 0.6.3
+  version: "0.7.0"
 
 package:
   name: patatt
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://mirrors.edge.kernel.org/pub/software/devel/patatt/patatt-${{ version }}.tar.gz
-  sha256: a5b7511d9694a3448f25cc7db2df545605fcbadd5dd509484b656f5be123e56d
+  sha256: ee545ee4e1d724c8e9f94851c1c9a8d4fb8d8307e086f8f01f591a86176f5469
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: python -m pip install . -vv --no-deps --no-build-isolation
   python:
