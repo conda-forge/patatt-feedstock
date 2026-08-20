@@ -1,5 +1,5 @@
 context:
-  version: "0.7.1"
+  version: "0.8.0"
 
 package:
   name: patatt
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://mirrors.edge.kernel.org/pub/software/devel/patatt/patatt-${{ version }}.tar.gz
-  sha256: 928132e660c60df5868ab7a4ffa9ab64207d7417e9258504736545f731edad1e
+  sha256: a81bdca08174ae8868795503f9c533aff7142576ea651c4fc1ed18527e0ed208
 
 build:
   number: 0
@@ -30,7 +30,9 @@ tests:
   - python:
       imports:
         - patatt
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - pip
